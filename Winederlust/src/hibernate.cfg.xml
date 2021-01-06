@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- Hibernate configuration file -->
+<hibernate-configuration>
+ <session-factory>
+  <!-- Using JDBC and MySQL, the default port is 3306, name of database is cs485_lab -->
+  <property name="connection.url">jdbc:mysql://localhost:3306/cs485_lab?serverTimezone=UTC</property>
+  <!-- should be the username and password to MySQL server -->
+  <property name="connection.username">root</property>
+  <property name="connection.password">12345678</property>
+  <!-- Using JDBS to connect to MySQL, JDBC driver needs to to included in the build path of eclipse -->
+  <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="current_session_context_class">thread</property>
+  <mapping resource="Customer.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

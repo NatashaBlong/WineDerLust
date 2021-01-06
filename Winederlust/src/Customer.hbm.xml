@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Hibernate mapping file, it maps a Java class Sport(ID,Sport) to database table information(id,information) -->
+<hibernate-mapping>
+ <class name="Winderlust.wine" table="customer">
+  <!-- Java class Sport to table sport -->
+  <id name="ID" type="int">
+   <generator class="increment"/>
+  </id>
+  	<property column="fname" name="f_name" type="string"/>
+  	<property column="lname" name="l_name" type="string"/>
+    <property column="email" name="email" type="string"/>
+  	<property column="pass" name="pass" type="string"/>
+ </class>
+</hibernate-mapping>
